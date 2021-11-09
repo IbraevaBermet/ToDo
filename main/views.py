@@ -1,5 +1,6 @@
 from django.shortcuts import render,HttpResponse
 from .models import ToDo
+from .models import ToMeet
 
 def homepage(request):
     return render(request, "index.html")
@@ -11,4 +12,8 @@ def test(request):
 
 
 def second(request):
-    return HttpResponse("test 2 page")
+    return HttpResponse(request,"test 2 page")
+
+def test3(request):
+    to_meeting= ToMeet.objects.all()
+    return render(request,"meeting.html",{"to_meeting":to_meeting})
