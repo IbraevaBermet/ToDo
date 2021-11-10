@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from main.views import homepage,test,second,test3
+from homework.views import homework
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -23,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("",homepage,name="home"),
     path("test",test,name="test"),
+    path("hw",homework,name="homework"),
     path("test2/", second),
     path("test3/",test3,name="meet"),
 ]   + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  \
