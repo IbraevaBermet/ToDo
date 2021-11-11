@@ -24,3 +24,13 @@ def add_todo(request):
     todo=ToDo(text=text)
     todo.save()
     return redirect(test)
+
+def add_meet(request):
+    form = request.POST
+    text=form["ToMeet_text"]
+    text2=form["ToMeet_text2"]
+    meet=ToMeet(persone=text,phone_number=text2)
+    meet.save()
+    return redirect(test3)
+
+
