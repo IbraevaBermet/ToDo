@@ -27,7 +27,12 @@
         <div class='todo_container'>
 
             {% for to_meeting in to_meeting %}
-            <div class='todo_item'>
+            <div class='todo_item 
+                {% if todo.is_favorite %}
+                    marked
+                {% endif %}  
+            
+            '>
                 <div class='todo_item_header'>
                     <label class='checkbox_container'>
                         <input type='checkbox'>
@@ -39,7 +44,7 @@
                     <p>{{ to_meeting.phone_number}}</p>
                     <div class='action_buttons'>
                         <img src="{% static './icon/unmark.png' %}" />
-                        <img src="{% static './icon/delete.png' %}" />
+                        <a href="{% url 'delete-meet' to_meeting.id %}"><img src="{% static './icon/delete.png' %}" /></a>
                     </div>
                 </div>
 

@@ -66,5 +66,13 @@ def close_todo(request,id):
     todo.save()
     return redirect(test)
 
+def delete_meet(request,id):
+    to_meeting=ToMeet.objects.get(id=id)
+    to_meeting.delete()
+    return redirect(test3)
+
+
+
+
 
 
