@@ -59,7 +59,7 @@ section{
 }
 
 .todo_item.done{
-    background-color: rgb(100, 211, 100);
+    background-color: rgb(155, 163, 155);
     text-decoration: line-through;
     color: grey;
 
@@ -87,6 +87,10 @@ section{
 .todo_item_header h4{
     font-size: 18px;
     font-family: sans-serif;
+}
+
+.todo_item_header h4 a{
+    text-decoration: none;
 }
 
 .todo_item_footer{
