@@ -74,7 +74,7 @@ section{
 }
 
 .todo_item.marked{
-    background-color: rgb(211, 208, 13);
+    background-color: rgb(241, 240, 175);
     border: 2px solid rgb(221, 153, 28);
 }
 
