@@ -71,6 +71,12 @@ def delete_meet(request,id):
     to_meeting.delete()
     return redirect(test3)
 
+def mark_meet(request,id):
+    to_meeting= ToMeet.objects.get(id=id)
+    to_meeting.is_favorite=True
+    to_meeting.save()
+    return redirect(test3)    
+
 
 
 
